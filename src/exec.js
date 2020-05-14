@@ -1,5 +1,4 @@
-import util from 'util'
-import child from 'child_process'
+const util = require('util')
+const child = require('child_process')
 
-
-export default util.promisify(child.exec);
+module.exports = util.promisify(child.exec);

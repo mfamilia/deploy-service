@@ -1,5 +1,5 @@
 [Unit]
-Description=hello_env.js - making your environment variables rad
+Description=Deploy Service Github Listener
 Documentation=https://github.com/mfamilia/deploy-service
 After=network.target
 

@@ -1,7 +1,5 @@
 import request from 'supertest'
-import low from '0http/lib/server/low'
-import cero from '0http'
-import router from './src/router'
+import server from './src/server'
 import exec from './src/exec'
 
 
@@ -9,21 +7,13 @@ jest.mock('./src/exec')
 
 describe('Service Tests', () => {
   const baseUrl = `http://localhost:${process.env.PORT}`
-  const { server } = cero({ 
-    server: low(),
-    router
-  })
 
   beforeEach(() => {
     exec.mockResolvedValue()
   })
 
   it('should successfully register service routes', (done) => {
-    server.start(~~process.env.PORT, socket => {
-      if (socket) {
-        done()
-      }
-    })
+    server.listen(process.env.PORT, done)
   })
 
   it('should GET JSON response: /health', async () => {
