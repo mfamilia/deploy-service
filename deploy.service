@@ -1,0 +1,14 @@
+[Unit]
+Description=hello_env.js - making your environment variables rad
+Documentation=https://github.com/mfamilia/deploy-service
+After=network.target
+
+[Service]
+Environment=PORT=5050
+Type=simple
+User=deploy
+ExecStart=/usr/bin/node /projects/deploy-service/index.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

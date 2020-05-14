@@ -30,7 +30,7 @@ router.on('POST', '/github', async (req, res) => {
 	await exec(`git -C ${path} reset --hard`, execCallback);
 	await exec(`git -C ${path} clean -df`, execCallback);
 	await exec(`git -C ${path} pull -f`, execCallback);
-  await exec(`yarn --cwd ${path} install --production`, execCallback);
+  await exec(`${path}/update.sh`, execCallback);
   
   res.setHeader('content-type', 'application/json')
   res.end(JSON.stringify({ data: 'success' }))
