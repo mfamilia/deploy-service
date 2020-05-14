@@ -1,0 +1,25 @@
+{
+  "name": "deploy-service",
+  "version": "1.0.0",
+  "description": "Service that turns Github pushes into upgrades for deployed projects.",
+  "main": "index.js",
+  "repository": "git@github.com:mfamilia/deploy-service.git",
+  "author": "Manuel Familia",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "0http": "^2.3.0",
+    "find-my-way": "^3.0.0",
+    "uWebSockets.js": "uNetworking/uWebSockets.js#v17.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-jest": "^26.0.1",
+    "jest": "^26.0.1",
+    "supertest": "^4.0.2"
+  },
+  "scripts": {
+    "test": "PORT=3434 PROJECTS_DIR=./projects jest"
+  }
+}

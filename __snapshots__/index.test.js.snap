@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Service Tests should POST JSON: /github 1`] = `
+Array [
+  Array [
+    "git -C ./projects/sample reset --hard",
+    [Function],
+  ],
+  Array [
+    "git -C ./projects/sample clean -df",
+    [Function],
+  ],
+  Array [
+    "git -C ./projects/sample pull -f",
+    [Function],
+  ],
+  Array [
+    "yarn --cwd ./projects/sample install --production",
+    [Function],
+  ],
+]
+`;
