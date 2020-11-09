@@ -9,7 +9,7 @@
   "private": false,
   "dependencies": {
     "0http": "^2.3.0",
-    "find-my-way": "^3.0.0"
+    "find-my-way": "^3.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
